@@ -1,0 +1,11 @@
+config.yaml
+wigon
+.vscode
+modules/__pycache__
+tweets
+.pylintrc
+.git
+slangs_abbreviations
+temp
+output
+wigon_main

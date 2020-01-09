@@ -1,0 +1,31 @@
+twitter_config:
+  consumer_key: ...
+  consumer_secret: ...
+  access_token: ...
+  access_token_secret: ...
+  endpoint_30day: tweets/search/30day/:[env_name]
+  endpoint_archive: tweets/search/fullarchive/:[env_name]
+mongodb_config:
+  db_name: 'wigon'
+  tweets_collection: 'tweets'
+  # For the following setting either complete section A or section B
+  # Section A (eg: mongodb://user:password@host)
+  dsn: ''
+  # -----------
+  # Section B
+  host: 'localhost'
+  port: 27017
+  #username: ''
+  #password: ''
+  # -----------
+global:
+  slang_file: '' #path to json file or empty if there is no file
+  words_threshold: 5 # If tweet has less number of words than this, it will be ignored
+  abbr_exceptions: 'time,part,way,lot,usa' #comma-seprated words
+  correction_exceptions: '' #comma-seprated words
+  representative_share: 0.001 #All the tweets in the community * This number will be selected as representative from each community
+scoring:
+  verified: 1 #add this score to tweet if the author is a verified user
+  faves_rt_constant: 0.000002 #multiply this to total number of faves and retweets and add to tweet score
+  popularity_constant: 0.00000002 #(followers-followings) * this number and add to score
+  tweet_length_constant: 0.002 #Number of preprocessed words * to this number will be added to the score
