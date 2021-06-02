@@ -59,7 +59,7 @@ thinc==7.3.1
 tqdm==4.40.2
 TwitterAPI==2.5.10
 typed-ast==1.4.0
-urllib3==1.25.7
+urllib3==1.26.5
 wasabi==0.4.2
 wrapt==1.11.2
 zipp==0.6.0
